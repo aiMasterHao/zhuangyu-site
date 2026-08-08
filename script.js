@@ -24,4 +24,6 @@ function showSlide(index) {
 }
 
 dots.forEach((dot, index) => dot.addEventListener('click', () => showSlide(index)));
-setInterval(() => showSlide((activeSlide + 1) % slides.length), 6000);
+if (slides.length > 1) {
+  setInterval(() => showSlide((activeSlide + 1) % slides.length), 6000);
+}
